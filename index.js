@@ -108,45 +108,34 @@ $(document).ready(() => {
   
 });
   
-/*
 
-$('#searchInput').change(() => {
-    const searchCity = $('#searchInput').val();
-
-
-
-
-
-    $(document).on('click', '.deleteBtn', function(e) { // javítás: eseménykezelő hozzáadva
-    e.preventDefault();
-    var cityName = $(this).data('city');
-
-  $('#searchBtn').click(() => {
-    const searchCity = $('#searchInput').val();
-    const cityName = $('#cityName').val();
+  $('#searchCityBtn').click(() => {
+    const searchCity = $('#searchCity').val();
+    
 
     
     $.ajax({
       url: 'citySearch.php',
       method: 'POST',
-      data: { county: searchCity, cityName },
+      data: { county: searchCity},
       dataType: 'json',
       success: response => {
-          if (response.cities.length > 0) {
-            var cityList = '<div class="city-list">';
+          if (response.cities.length < 0) {
+            $('#cityList').html(cityList).hide(); 
+            var cityNameResult = '<div class="city-list">';
             response.cities.forEach(city => {
-              cityList += `<div class="city">${city}             <div class="delete-container"><button class="deleteBtn" data-city="${city}">Törlés</button></div></div>`; // javítás: deleteBtn osztály hozzáadva
+              cityNameResult += `<div class="city">${city}             <div class="delete-container"><button class="deleteBtn" data-city="${city}">Törlés</button></div></div>`; // javítás: deleteBtn osztály hozzáadva
             });
-            cityList += '</div>';
-            $('#cityList').html(cityList).show();            
+            cityNameResult += '</div>';
+            $('#cityNameResult').html(cityNameResult).show();            
           } else {
-            $('#cityList').hide();
+            $('#cityNameResult').hide();
           }
         }
     });
   });
 
-*/
+
 
 
 
