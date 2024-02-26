@@ -40,27 +40,12 @@
                         <input type="number" id="cityZip" name="cityZip" class="form-control" placeholder="Irányítószáma">
                         <button type="button" id="addCityBtn" class="btn btn-primary" style="display:none;">Hozzáadás</button>
                     </div>
-                    <!--
                     <div class="form-group">
                         <label for="searchInput" class="sr-only">Search</label>
                         <input type="text" id="searchInput" name="city" class="form-control" placeholder="Keresés ZIP vagy név alapján: ">
                         <button type="button" id="searchBtn" class="btn btn-primary" style="display:none;">Keresés</button>
 
                     </div>
-                    -->
-
-                    <div class="form-group">
-                        <label for="searchCity">Keresés Városra</label>
-                        <input type="text" id="searchCity" name="city" class="form-control" placeholder="Keresés név alapján: ">
-                        <br>
-                        <button type="button" id="searchCityBtn" class="btn btn-primary">Keresés</button>
-                    </div>
-                    
-                    <div id="cityNameResult"></div>
-                  
-s
-
-
                 </div>
                 <div id="countyData" class="data"></div>
                 <div id="countyImageContainer"></div> 
